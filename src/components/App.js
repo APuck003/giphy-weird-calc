@@ -1,32 +1,15 @@
 import React from 'react';
-import {FavoritesWrapper} from "./FavoritesWrapper"
-import {Header} from './Header'
-import styled from "styled-components"
-import {ResultsWrapper} from "./ResultsWrapper"
-import {SearchWrapper} from "./SearchWrapper"
-import {Wrapper} from "./Wrapper"
-
-const StyledMain = styled.div`
-  display: flex;
-  flex-direction: row;
-`
+import {BrowserRouter as Router, Route} from "react-router-dom"
+import {MainRoute} from "./MainRoute"
+import {WeirdnessScoreRoute} from "./WeirdnessScoreRoute"
 
 export const App = props => {
   return (
     <div className="App">
-      <Header />
-      
-      <StyledMain>
-        <Wrapper>
-          <SearchWrapper />
-          <ResultsWrapper />
-        </Wrapper>
-        
-        <Wrapper>
-          <FavoritesWrapper/>
-        </Wrapper>
-      </StyledMain>
-      
+      <Router>
+        <Route path="/" exact component={MainRoute} />
+        <Route path="/results" exact component={WeirdnessScoreRoute} />
+      </Router>
     </div>
   );
 }
