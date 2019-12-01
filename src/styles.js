@@ -1,11 +1,12 @@
 import styled from "styled-components"
 
 export const StyledSearchWrapper = styled.div`
-  background-color: lightgrey;
-  width: 60%;
+  //background-color: lightgrey;
+  //width: 60%;
   padding: 2rem;
   border-style: hidden dotted dotted hidden;
   border-width: 1px;
+  flex-direction: column;
 `
 
 export const StyledHeader = styled.div`
@@ -60,4 +61,10 @@ export const StyledText = styled.div`
     margin-left: 1em;
     margin-right: 1em;
   }
+`
+export const StyledGifResult = styled.div`
+  height: 225px;
+  width: 300px;
+  border: 1px solid blue;
+  border-radius: 2px;
 `

@@ -19,7 +19,9 @@ export const LikeButton = props => {
   return (
       <StyledLikeButtonSection>
         <StyledLikeButton>
-          👍🏻
+          <span role="img" aria-label="#">
+            👍🏻
+          </span>
         </StyledLikeButton>
       </StyledLikeButtonSection>
   );
