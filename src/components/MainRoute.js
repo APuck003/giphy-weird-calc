@@ -6,6 +6,7 @@ import {ResultsWrapper} from "./ResultsWrapper"
 import {SearchWrapper} from "./SearchWrapper"
 import {Wrapper} from "./Wrapper"
 
+
 const StyledMain = styled.div`
   display: flex;
   flex-direction: row;

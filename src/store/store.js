@@ -1,18 +1,7 @@
-import {createStore} from "redux"
+import {createStore, combineReducers} from "redux"
+import {searchData} from "../reducers/search-data"
 
-const initialState = {
-  gifs: []
-}
-
-const rootReducer = (state = initialState, action) => {
-  switch(action.type) {
-    case "":
-      return null
-   
-    default:
-      return state
-  }
-}
+const rootReducer = combineReducers({searchData})
 
 export const store = createStore(
   rootReducer
