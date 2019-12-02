@@ -6,9 +6,9 @@ import {handleEmptyResult} from "./results-data"
 
 export const getFavorite = (
     phrase = "",
-    weirdNum = 0,
+    weirdnessLevel = 0,
     url = null,
-    title = null) => ({phrase, weirdNum, url, title})
+    title = null) => ({phrase, weirdnessLevel, url, title})
 
 export const defaultState = {
   favorited: [],
@@ -82,7 +82,7 @@ export const getWeirdScore = createSelector(
     getFavorites,
     favorites => {
       const weirdNumTotal = favorites.reduce((total, gif) => {
-        return total + gif.weirdNum
+        return total + gif.weirdnessLevel
       }, 0)
       const averageNum = weirdNumTotal / MAX_FAVORITES
       const remainder = averageNum % 1
