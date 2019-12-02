@@ -2,7 +2,7 @@ import produce from "immer"
 import {SEARCH_PHRASE, SET_WEIRDNESS_LEVEL, CLEAR_SEARCH} from "../actions"
 
 export const defaultState = {
-  searchTerm: "",
+  phrase: "",
   weirdnessLevel: 0,
 }
 
@@ -10,7 +10,7 @@ export const searchData = (state = defaultState, action) => {
   return produce(state, draftState => {
     switch (action.type) {
       case SEARCH_PHRASE: {
-        draftState.searchTerm = action.payload
+        draftState.phrase = action.payload
         return draftState
       }
       case SET_WEIRDNESS_LEVEL: {
@@ -28,5 +28,5 @@ export const searchData = (state = defaultState, action) => {
   })
 }
 
-export const getSearchTerm = state => state.searchData.searchTerm
+export const getSearchPhrase = state => state.searchData.phrase
 export const getWeirdnessLevel = state => state.searchData.weirdnessLevel;

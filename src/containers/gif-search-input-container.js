@@ -1,14 +1,15 @@
-import {searchPhrase} from "../actions/search/search-phrase"
 import {GifSearchInput} from "../components/GifSearchInput"
 import {connect} from "react-redux"
+import {getSearchInput} from "../reducers/input-data";
+import {updateInput} from "../actions/input/update-input"
 
 const mapStateToProps = state => ({
-  searchTerm: state.searchTerm,
+  phrase: getSearchInput(state),
 });
 
 const mapDispatchToProps = dispatch => ({
   handleChange: e => {
-    const action = searchPhrase(e.target.value)
+    const action = updateInput(e.target.value)
     dispatch(action)
   }
 });
