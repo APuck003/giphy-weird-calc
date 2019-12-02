@@ -47,17 +47,17 @@ export const resultsData = (state = defaultState, action) => {
 
 export const getResults = state => state.resultsData.data;
 
-export const handleFetchResults = createSelector(
-    getWeirdNumResult,
-    getSearchPhrase,
-    (result, query) => result.loading === false && result.url === null && query.length > 0
-)
-
 export const getWeirdNumResult = createSelector(
     getResults,
     getWeirdnessLevel,
     (results, weirdnessLevel) => results[weirdnessLevel]
 );
+
+export const handleFetchResults = createSelector(
+    getWeirdNumResult,
+    getSearchPhrase,
+    (result, query) => result.loading === false && result.url === null && query.length > 0
+)
 
 export const getURL = createSelector(
     getWeirdNumResult,

@@ -1,9 +1,11 @@
 import produce from "immer";
+import {createSelector} from "reselect"
 import { CLEAR_INPUT, UPDATE_INPUT } from "../actions";
 
 export const defaultState = {
   value: ""
 };
+
 export const inputData = (state = defaultState, action) => {
   return produce(state, draftState => {
     switch (action.type) {
@@ -24,3 +26,7 @@ export const inputData = (state = defaultState, action) => {
 
 export const getInputData = state => state.inputData.value;
 
+export const handleEmptySearch = createSelector(
+    getInputData,
+    query => query.length === 0
+)
