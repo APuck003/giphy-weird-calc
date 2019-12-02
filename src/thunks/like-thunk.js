@@ -1,9 +1,9 @@
-import {addFavorite} from "../actions/favorites/add-favorite"
+import {addFavorite} from "../actions/add-favorite"
 import {getSearchPhrase, getWeirdnessLevel} from "../reducers/search-data"
 import {getTitle, getURL} from "../reducers/results-data"
 import {favoritesData} from "../reducers/favorites-data"
 
-export const addFavoriteThunk = (dispatch, getState) => {
+export const likeThunk = (dispatch, getState) => {
   const state = getState()
   const phrase = getSearchPhrase(state)
   const weirdnessLevel = getWeirdnessLevel(state)

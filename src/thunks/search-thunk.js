@@ -1,6 +1,6 @@
 import {getRequestedGif} from "../giphy-api/giphy-api-request";
 import {getSearchPhrase, getWeirdnessLevel} from "../reducers/search-data";
-import {setResults} from "../actions/results/set-results";
+import {setResults} from "../actions/set-results";
 import {getResult, handleFetchResults} from "../reducers/results-data";
 
 export const search = async (dispatch, getState) => {

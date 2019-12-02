@@ -1,5 +1,5 @@
 import {isTermLikeable} from "../reducers/favorites-data"
-import {addFavoriteThunk} from "../thunks/add-favorite-thunk"
+import {likeThunk} from "../thunks/like-thunk"
 import {connect} from 'react-redux'
 import {LikeButton} from "../components/LikeButton"
 
@@ -8,7 +8,7 @@ export const mapStateToProps = state => ({
 })
 
 export const mapDispatchToProps = dispatch => ({
-  addFavoriteThunk: () => dispatch(addFavoriteThunk())
+  addFavoriteThunk: () => dispatch(likeThunk())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(LikeButton)
