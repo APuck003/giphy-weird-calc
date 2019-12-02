@@ -1,5 +1,5 @@
 import produce from "immer"
-import {SET_GIF_SEARCH_PHRASE, SET_WEIRDNESS_LEVEL, CLEAR_SEARCH_DATA, SET_GIF_SEARCH_RESULT} from "../actions"
+import {SET_GIF_SEARCH_PHRASE, SET_WEIRDNESS_LEVEL, CLEAR_SEARCH_DATA} from "../actions"
 
 export const defaultState = {
   searchTerm: "",
