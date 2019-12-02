@@ -3,10 +3,10 @@ import {SET_RESULTS, CLEAR_RESULTS} from "../actions"
 import {getSearchPhrase, getWeirdnessLevel} from "./search-data"
 import {createSelector} from "reselect"
 
-export const getResult = (url = null, title = null, error = false, loading = false) => ({
+export const getResult = (url = null, title = null, didError = false, loading = false) => ({
   url,
   title,
-  error,
+  didError,
   loading
 })
 
@@ -56,7 +56,7 @@ export const getWeirdNumResult = createSelector(
 export const handleFetchResults = createSelector(
     getWeirdNumResult,
     getSearchPhrase,
-    (result, query) => result.loading === false && result.url === null && query.length > 0
+    (result, phrase) => result.loading === false && result.url === null && phrase.length > 0
 )
 
 export const getURL = createSelector(
@@ -69,7 +69,7 @@ export const getTitle = createSelector(
     result => shorten(result.title)
 );
 
-export const handleEmptyResult = createSelector(
+export const isResultEmpty = createSelector(
     getURL,
     url => {
       return url === null;
@@ -78,7 +78,7 @@ export const handleEmptyResult = createSelector(
 
 export const handleError = createSelector(
     getWeirdNumResult,
-    result => result.error
+    result => result.didError
 );
 
 export const handleLoading = createSelector(

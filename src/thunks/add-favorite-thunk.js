@@ -1,7 +1,7 @@
 import {addFavorite} from "../actions/favorites/add-favorite"
 import {getSearchPhrase, getWeirdnessLevel} from "../reducers/search-data"
 import {getTitle, getURL} from "../reducers/results-data"
-import {getFavorite} from "../reducers/favorites-data"
+import {favoritesData} from "../reducers/favorites-data"
 
 export const addFavoriteThunk = (dispatch, getState) => {
   const state = getState()
@@ -9,6 +9,6 @@ export const addFavoriteThunk = (dispatch, getState) => {
   const weirdnessLevel = getWeirdnessLevel(state)
   const url = getURL(state)
   const title = getTitle(state)
-  const likedGif = getFavorite(phrase, weirdnessLevel, url, title)
+  const likedGif = favoritesData(phrase, weirdnessLevel, url, title)
   dispatch(addFavorite(likedGif))
 }

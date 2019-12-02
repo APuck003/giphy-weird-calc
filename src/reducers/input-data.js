@@ -24,9 +24,9 @@ export const inputData = (state = defaultState, action) => {
   });
 };
 
-export const getInputData = state => state.inputData.value;
+export const getSearchInput = state => state.inputData.value;
 
 export const handleEmptySearch = createSelector(
-    getInputData,
-    query => query.length === 0
+    getSearchInput,
+    phrase => phrase.length === 0
 )

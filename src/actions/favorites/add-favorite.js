@@ -1,6 +1,6 @@
 import { ADD_FAVORITE } from "../index";
 
-export const addFavorite = gif => ({
+export const addFavorite = likedGif => ({
   type: ADD_FAVORITE,
-  payload: gif
+  payload: likedGif
 });

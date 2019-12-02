@@ -1,8 +1,8 @@
-export const endpointURL = (query, weirdNum) => `https://api.giphy.com/v1/gifs/translate?api_key=${process.env.REACT_APP_API_KEY}&s=${query}&weirdNum=${weirdNum}`;
+export const endpointURL = (phrase, weirdness) => `https://api.giphy.com/v1/gifs/translate?api_key=${process.env.REACT_APP_API_KEY}&s=${phrase}&weirdNum=${weirdness}`;
 
 
-export const getRequestedGif = async (query, weirdNum) => {
-  const res = await fetch(endpointURL(query, weirdNum));
+export const getRequestedGif = async (phrase, weirdness) => {
+  const res = await fetch(endpointURL(phrase, weirdness));
   const json = await res.json();
   return gifFromJSON(json);
 };

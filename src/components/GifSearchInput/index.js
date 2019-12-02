@@ -1,9 +1,9 @@
 import React from 'react'
 import {StyledSearch, StyledForm, StyledInput, StyledButton} from "../styles"
-// import searchPhrase from "../containers/gif-search-input-container"
 
 export const GifSearchInput = props => {
-  const {handleChange, searchTerm} = props
+  // console.log(props)
+  // const {handleChange, searchPhrase, search, handleEmptySearch} = props
   return (
       <StyledSearch>
         <p>Search Term</p>
@@ -13,11 +13,11 @@ export const GifSearchInput = props => {
           <StyledInput
               type="text"
               placeholder="Hamburger"
-              onChange={handleChange}
-              value={searchTerm}
+              // onChange={handleChange}
+              // value={searchPhrase}
           />
       
-          <StyledButton>Search</StyledButton>
+          <StyledButton type="submit">Search</StyledButton>
     
         </StyledForm>
       </StyledSearch>

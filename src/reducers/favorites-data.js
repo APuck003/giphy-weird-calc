@@ -2,7 +2,7 @@ import {produce} from "immer"
 import {ADD_FAVORITE, EMPTY_FAVORITES, REMOVE_FAVORITE} from "../actions"
 import {createSelector} from "reselect"
 import {getSearchPhrase} from "./search-data"
-import {handleEmptyResult} from "./results-data"
+import {isResultEmpty} from "./results-data"
 
 export const getFavorite = (
     phrase = "",
@@ -57,6 +57,7 @@ export const getFavorites = createSelector(
     getEmptyFavorites,
     (favorited, empty) => [...favorited, ...empty]
 )
+
 export const favoritesRemaining = createSelector(
     getFavoritedGifs,
     favorited => MAX_FAVORITES - favorited.length
@@ -70,10 +71,10 @@ export const isFavoritesRemaining = createSelector(
 export const handleGifLike = createSelector(
     getFavoritedGifs,
     getSearchPhrase,
-    handleEmptyResult,
+    isResultEmpty,
     isFavoritesRemaining,
-    (favorited, submittedPhrase, isResultEmpty, isFavoritesRemaining) =>
-        !isResultEmpty &&
+    (favorited, submittedPhrase, handleEmptyResult, isFavoritesRemaining) =>
+        !handleEmptyResult &&
         isFavoritesRemaining &&
         favorited.every(gif => gif.phrase !== submittedPhrase)
 )

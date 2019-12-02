@@ -1,6 +1,6 @@
 import {SEARCH_PHRASE} from "../index"
 
-export const searchPhrase = phrase => ({
+export const searchPhrase = term => ({
   type: SEARCH_PHRASE,
-  payload: phrase
+  payload: term
 })
