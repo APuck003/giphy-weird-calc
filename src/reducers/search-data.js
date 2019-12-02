@@ -1,5 +1,5 @@
 import produce from "immer"
-import {SET_GIF_SEARCH_PHRASE, SET_WEIRDNESS_LEVEL, CLEAR_SEARCH_DATA} from "../actions"
+import {SEARCH_PHRASE, SET_WEIRDNESS_LEVEL, CLEAR_SEARCH} from "../actions"
 
 export const defaultState = {
   searchTerm: "",
@@ -9,7 +9,7 @@ export const defaultState = {
 export const searchData = (state = defaultState, action) => {
   return produce(state, draftState => {
     switch (action.type) {
-      case SET_GIF_SEARCH_PHRASE: {
+      case SEARCH_PHRASE: {
         draftState.searchTerm = action.payload
         return draftState
       }
@@ -17,7 +17,7 @@ export const searchData = (state = defaultState, action) => {
         draftState.weirdnessLevel = action.payload
         return draftState
       }
-      case CLEAR_SEARCH_DATA: {
+      case CLEAR_SEARCH: {
         draftState = defaultState
         return draftState
       }

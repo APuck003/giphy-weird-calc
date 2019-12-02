@@ -1,6 +1,6 @@
 import React from 'react'
 import {StyledSearch, StyledForm, StyledInput, StyledButton} from "../styles"
-// import setGifSearchPhrase from "../containers/gif-search-input-container"
+// import searchPhrase from "../containers/gif-search-input-container"
 
 export const GifSearchInput = props => {
   const {handleChange, searchTerm} = props
