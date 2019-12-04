@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from "styled-components"
-import {GifResult} from "../GifResult"
+import {DefaultGifResult} from "../DefaultGifResult"
 import {LikeButton} from "../LikeButton"
 import {Title} from "../Title"
 import {Slider} from "../Slider"
+
 
 const StyledResultsWrapper = styled.div`
   padding: 3rem;
@@ -17,7 +18,7 @@ export const ResultsWrapper = () => {
   return (
       <StyledResultsWrapper>
         <Title title="Your Result" />
-        <GifResult />
+        <DefaultGifResult />
         <LikeButton />
         <Slider />
       </StyledResultsWrapper>

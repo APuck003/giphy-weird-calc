@@ -8,19 +8,28 @@ const StyledGifSection = styled.div`
   padding-bottom: 2rem;
 `
 
-const StyledGifResult = styled.div`
+const StyledGifError = styled.div`
   height: 225px;
   width: 300px;
   border: 1px solid blue;
   border-radius: 2px;
+  background-color: red;
+  color: white;;
 `
 
-export const GifResult = props => {
+const StyledDefaultErrorSpan = styled.span`
+  text-align: center;
+  margin: 0;
+`
+
+export const ResultError = () => {
   return (
       <StyledGifSection>
-        <StyledGifResult>
-          <div>Gif Result</div>
-        </StyledGifResult>
+        <StyledGifError>
+          <StyledDefaultErrorSpan>
+            Error Finding Gif
+          </StyledDefaultErrorSpan>
+        </StyledGifError>
       </StyledGifSection>
   )
 }
