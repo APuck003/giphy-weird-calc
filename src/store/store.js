@@ -11,7 +11,7 @@ const rootReducer = combineReducers({
   searchData,
   inputData,
   resultsData,
-  favoritesData,
+  favoritesData
 })
 
 export const store = createStore(

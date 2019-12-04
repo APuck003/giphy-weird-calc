@@ -1,5 +1,5 @@
 import React from 'react'
-import {StyledText} from '../styles'
+import {StyledText} from '../../styles'
 
 
 export const Instructions = props => {

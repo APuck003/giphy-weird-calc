@@ -29,4 +29,4 @@ export const searchData = (state = defaultState, action) => {
 }
 
 export const getSearchPhrase = state => state.searchData.phrase
-export const getWeirdnessLevel = state => state.searchData.weirdnessLevel;
+export const getWeirdnessLevel = state => state.searchData.weirdnessLevel

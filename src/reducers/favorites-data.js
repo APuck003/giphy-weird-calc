@@ -68,13 +68,13 @@ export const isFavoritesRemaining = createSelector(
     remaining => remaining > 0
 )
 
-export const handleGifLike = createSelector(
+export const handleGifLikes = createSelector(
     getFavoritedGifs,
     getSearchPhrase,
     isResultEmpty,
     isFavoritesRemaining,
-    (favorited, submittedPhrase, handleEmptyResult, isFavoritesRemaining) =>
-        !handleEmptyResult &&
+    (favorited, submittedPhrase, isResultEmpty, isFavoritesRemaining) =>
+        !isResultEmpty &&
         isFavoritesRemaining &&
         favorited.every(gif => gif.phrase !== submittedPhrase)
 )

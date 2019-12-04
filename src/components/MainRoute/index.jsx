@@ -1,10 +1,10 @@
 import React from 'react';
-import {FavoritesWrapper} from "./FavoritesWrapper"
-import {Header} from './Header'
+import {FavoritesWrapper} from "../FavoritesWrapper"
+import {Header} from '../Header'
 import styled from "styled-components"
-import {ResultsWrapper} from "./ResultsWrapper"
-import {SearchWrapper} from "./SearchWrapper"
-import {Wrapper} from "./Wrapper"
+import {ResultsWrapper} from "../ResultsWrapper"
+import {SearchWrapper} from "../SearchWrapper"
+import {Wrapper} from "../Wrapper"
 
 
 const StyledMain = styled.div`
@@ -12,7 +12,7 @@ const StyledMain = styled.div`
   flex-direction: row;
 `
 
-export const MainRoute = props => {
+export const MainRoute = () => {
   return (
       <div>
         <Header />

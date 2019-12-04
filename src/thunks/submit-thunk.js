@@ -1,11 +1,11 @@
 import { searchPhrase } from "../actions/search/search-phrase";
 import { getSearchInput } from "../reducers/input-data";
-import { search } from "./search-thunk";
+import { searchThunk } from "./search-thunk";
 
-export const submit = (dispatch, getState) => {
+export const submitThunk = (dispatch, getState) => {
   const state = getState();
-  const searchTerm = getSearchInput(state);
+  const phrase = getSearchInput(state);
 
-  dispatch(searchPhrase(searchTerm));
-  dispatch(search);
+  dispatch(searchPhrase(phrase));
+  dispatch(searchThunk);
 };

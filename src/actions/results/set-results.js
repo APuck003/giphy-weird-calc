@@ -1,4 +1,4 @@
-import {SET_RESULTS} from "./index"
+import {SET_RESULTS} from "../index"
 
 export const setResults = (weirdnessLevel, result) => ({
   type: SET_RESULTS,

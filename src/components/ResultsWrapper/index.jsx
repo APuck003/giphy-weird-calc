@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from "styled-components"
-import {GifResult} from "./GifResult"
-import {LikeButton} from "./LikeButton"
-import {Title} from "./Title"
-import {Slider} from "./Slider"
+import {GifResult} from "../GifResult"
+import {LikeButton} from "../LikeButton"
+import {Title} from "../Title"
+import {Slider} from "../Slider"
 
 const StyledResultsWrapper = styled.div`
   padding: 3rem;

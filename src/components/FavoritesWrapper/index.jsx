@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from "styled-components"
-import {CalculateWeirdness} from "./CalculateWrapper"
-import {FavoriteGifs} from "./FavoriteGifs"
-import {Title} from "./Title"
+import {CalculateWrapper} from "../CalculateWrapper"
+import {FavoriteGifs} from "../FavoriteGifs"
+import {Title} from "../Title"
 
 const StyledFavoritesWrapper = styled.div`
   display: flex;
@@ -17,7 +17,7 @@ export const FavoritesWrapper = props => {
         <StyledFavoritesWrapper>
           <Title title="Your Liked Gifs"/>
           <FavoriteGifs />
-          <CalculateWeirdness />
+          <CalculateWrapper />
         </StyledFavoritesWrapper>
   )
 }

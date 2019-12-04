@@ -56,7 +56,7 @@ export const getWeirdNumResult = createSelector(
 export const handleFetchResults = createSelector(
     getWeirdNumResult,
     getSearchPhrase,
-    (result, phrase) => result.loading === false && result.url === null && phrase.length > 0
+    (result, submittedPhrase) => result.loading === false && result.url === null && submittedPhrase.length > 0
 )
 
 export const getURL = createSelector(

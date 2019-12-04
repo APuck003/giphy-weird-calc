@@ -10,7 +10,7 @@ export const getRequestedGif = async (phrase, weirdness) => {
 export const gifFromJSON = json => {
   const {jsonData} = json
   return {
-    url: data.image.original.url,
-    title: data.title,
+    url: jsonData.image.original.url,
+    title: jsonData.title,
   }
 }

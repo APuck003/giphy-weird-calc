@@ -7,3 +7,5 @@ export const WeirdnessScoreRoute = () => {
       </div>
   )
 }
+
+export default WeirdnessScoreRoute

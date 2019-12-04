@@ -1,5 +1,5 @@
 import React from 'react'
-import {StyledSearch, StyledForm, StyledInput, StyledButton} from "../styles"
+import {StyledSearch, StyledForm, StyledInput, StyledButton} from "../../styles"
 
 export const GifSearchInput = props => {
   // console.log(props)

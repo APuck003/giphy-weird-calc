@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
-import {DefaultFavoriteGifs} from "./DefaultFavoriteGifs"
+import {DefaultFavoriteGifs} from "../DefaultFavoriteGifs"
 
 const StyledFavorites = styled.div`
   display: flex;
@@ -10,11 +10,12 @@ const StyledFavorites = styled.div`
 `
 
 export const FavoriteGifs = props => {
-  const defaultGifs = [0, 1, 2, 3, 4]
+  const likedGifs = [1, 2, 3, 4, 5]
+  // const {likedGifs} = props
   
   return (
       <StyledFavorites>
-        {defaultGifs.map(i => {
+        {likedGifs.map(i => {
           return <DefaultFavoriteGifs key={i} />
         })}
       </StyledFavorites>

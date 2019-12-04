@@ -1,6 +1,6 @@
-import { REMOVE_FAVORITE } from "./index";
+import { REMOVE_FAVORITE } from "../index";
 
-export const removeFavorite = term => ({
+export const removeFavorite = phrase => ({
   type: REMOVE_FAVORITE,
-  payload: term
+  payload: phrase
 });
