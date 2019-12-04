@@ -62,6 +62,7 @@ export const StyledText = styled.div`
     margin-right: 1em;
   }
 `
+
 export const StyledGifResult = styled.div`
   height: 225px;
   width: 300px;

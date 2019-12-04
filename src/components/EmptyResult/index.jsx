@@ -7,7 +7,7 @@ export const EmptyResult = props => {
   
   return (
       <>
-        {handleError ? <ResultError/> : <DefaultGifResult/>}
+        {handleError ? <ResultError /> : <DefaultGifResult />}
       </>
   )
 }
