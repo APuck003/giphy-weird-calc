@@ -10,14 +10,29 @@ export const searchThunk = async (dispatch, getState) => {
 
   if (handleFetchResults(state)) {
     try {
-      dispatch(setResults(weirdnessLevel, getResult(true)))
+      dispatch(
+          setResults(
+              weirdnessLevel,
+              getResult(true)
+          )
+      )
+      
       const { url, title } = await getRequestedGif(searchPhrase, weirdnessLevel)
       
-      dispatch(setResults(weirdnessLevel, getResult(false, url, title)));
-    } catch (e) {
-      console.log(e);
       dispatch(
-          setResults(weirdnessLevel, getResult(false, null, null, true))
+          setResults(
+              weirdnessLevel,
+              getResult(false, url, title))
+      );
+    }
+    catch(e) {
+      console.log(e);
+      
+      dispatch(
+          setResults(
+              weirdnessLevel,
+              getResult(false, null, null, true)
+          )
       );
     }
   }

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
-import {DefaultGifResult} from "../DefaultGifResult"
-import {LikeButton} from "../LikeButton"
+import GifSearchResult from "../../containers/search-result"
+import LikeButton from "../../containers/like-button"
 import {Title} from "../Title"
 import {Slider} from "../Slider"
 
@@ -18,7 +18,7 @@ export const ResultsWrapper = () => {
   return (
       <StyledResultsWrapper>
         <Title title="Your Result" />
-        <DefaultGifResult />
+        <GifSearchResult />
         <LikeButton />
         <Slider />
       </StyledResultsWrapper>
