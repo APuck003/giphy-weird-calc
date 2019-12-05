@@ -17,7 +17,7 @@ const StyledSlider = styled.input`
 
 
 export const Slider = props => {
-  const {weirdnessCount} = props
+  const {weirdnessLevel, onChange} = props
   return (
       
       <StyledSliderContainer>
@@ -26,9 +26,10 @@ export const Slider = props => {
             min={0}
             max={10}
             defaultValue={0}
+            onChange={onChange}
         />
         
-        <p>Weirdness: {weirdnessCount}</p>
+        <p>Weirdness: {weirdnessLevel}</p>
       </StyledSliderContainer>
       
   )

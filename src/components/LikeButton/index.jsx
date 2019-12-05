@@ -17,13 +17,16 @@ const StyledLikeButton = styled.button`
 
 export const LikeButton = props => {
   const {handleGifLikes} = props
+  
   return (
       <StyledLikeButtonSection>
+        
         <StyledLikeButton disabled={!handleGifLikes}>
           <span role="img" aria-label="#">
             👍🏻
           </span>
         </StyledLikeButton>
+        
       </StyledLikeButtonSection>
   );
 };

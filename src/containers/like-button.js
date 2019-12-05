@@ -8,7 +8,7 @@ export const mapStateToProps = state => ({
 })
 
 export const mapDispatchToProps = dispatch => ({
-  likeThunk: () => dispatch(likeThunk())
+  likeThunk: () => dispatch(likeThunk)
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(LikeButton)

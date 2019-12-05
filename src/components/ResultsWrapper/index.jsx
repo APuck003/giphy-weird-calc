@@ -3,7 +3,7 @@ import styled from "styled-components"
 import GifSearchResult from "../../containers/search-result"
 import LikeButton from "../../containers/like-button"
 import {Title} from "../Title"
-import {Slider} from "../Slider"
+import Slider from "../../containers/slider"
 
 
 const StyledResultsWrapper = styled.div`
