@@ -92,3 +92,4 @@ export const getWeirdScore = createSelector(
           : Math.floor(averageNum)
     }
 )
+

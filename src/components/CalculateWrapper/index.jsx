@@ -1,18 +1,13 @@
 import React from 'react'
-import styled from "styled-components"
+import {StyledCalculateWrapper} from "../../styles"
 import {CalculateButton} from '../CalculateButton'
 
-const StyledCalculateWrapper = styled.div`
-  text-align: center;
-  padding-top: 6rem;
-`
 
 export const CalculateWrapper = props => {
   const {favoritesRemaining} = props
   
   return (
       <StyledCalculateWrapper>
-        
         
         <CalculateButton/>
         

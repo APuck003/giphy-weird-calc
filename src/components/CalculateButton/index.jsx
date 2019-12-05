@@ -1,13 +1,7 @@
 import React from 'react'
 import {withRouter} from "react-router-dom"
-import styled from "styled-components"
-import {StyledButton} from "../../styles"
+import {StyledCalculateButton} from "../../styles"
 
-const StyledCalculateButton = styled(StyledButton)`
-  padding: 0.8rem;
-  width: 375px;
-  font-size: large;
-`
 
 export const CalculateButton = props => {
   const {isFavoritesRemaining} = props

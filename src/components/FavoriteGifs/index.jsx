@@ -1,23 +1,19 @@
-import React from 'react'
-import styled from "styled-components"
+import React from "react";
 import {DefaultFavoriteGifs} from "../DefaultFavoriteGifs"
+import { FoundFavorite } from "../FoundFavorite";
 
-const StyledFavorites = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  padding-top: 90px;
-`
 
 export const FavoriteGifs = props => {
-  const likedGifs = [1, 2, 3, 4, 5]
-  // const {likedGifs} = props
-  
+  const { likedGifs } = props;
   return (
-      <StyledFavorites>
-        {likedGifs.map(i => {
-          return <DefaultFavoriteGifs key={i} />
-        })}
-      </StyledFavorites>
-  )
-}
+    <div>
+      {likedGifs.map((gif, index) =>
+        gif.url === null ? (
+          <DefaultFavoriteGifs />
+        ) : (
+          <FoundFavorite key={gif.phrase} gif={gif} />
+        )
+      )}
+    </div>
+  );
+};

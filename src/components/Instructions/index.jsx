@@ -2,7 +2,7 @@ import React from 'react'
 import {StyledText} from '../../styles'
 
 
-export const Instructions = props => {
+export const Instructions = () => {
   return (
       <StyledText>
         <p>

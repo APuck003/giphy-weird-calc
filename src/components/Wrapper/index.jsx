@@ -1,12 +1,5 @@
 import React from "react"
-import styled from "styled-components"
-
-const StyledWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: lightgray;
-  width: 60%;
-`
+import {StyledWrapper} from '../../styles'
 
 export const Wrapper = props => {
   return (

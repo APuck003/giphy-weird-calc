@@ -8,7 +8,7 @@ export const UPDATE_INPUT = "UPDATE_INPUT"
 export const CLEAR_INPUT = "CLEAR_INPUT"
 
 // Result Actions
-export const SET_RESULTS = "SET_RESULTS"
+export const SET_RESULT = "SET_RESULT"
 export const CLEAR_RESULTS = "CLEAR_RESULTS"
 
 // Favorite Actions

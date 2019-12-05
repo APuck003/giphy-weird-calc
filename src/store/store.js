@@ -6,7 +6,6 @@ import {favoritesData} from "../reducers/favorites-data"
 import thunk from "redux-thunk"
 import {composeWithDevTools} from "redux-devtools-extension"
 
-// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
   searchData,

@@ -7,7 +7,7 @@ import {submitThunk} from "../thunks/submit-thunk"
 
 const mapStateToProps = state => ({
   phrase: getSearchInput(state),
-  handleEmptySearch: handleEmptySearch(state)
+  isSearchEmpty: handleEmptySearch(state)
 });
 
 const mapDispatchToProps = dispatch => ({
