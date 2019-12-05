@@ -87,8 +87,15 @@ export const handleLoading = createSelector(
 );
 
 export const shorten = title => {
+  // if (title.length > 25) {
+  //   title = title.slice(0, 25)
+  // }
+  // return title;
+  
   if (title.length > 25) {
-    title = title.slice(0, 25)
+    let shorter = title.substr(0, 25)
+    let end = shorter.lastIndexOf(" ")
+    return end === -1 ? shorter : shorter.substr(0, end)
   }
-  return title;
+  return title
 };

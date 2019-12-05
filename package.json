@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "formik": "^2.0.6",
     "immer": "^5.0.0",
     "node-core-lib": "^0.11.11",
     "react": "^16.12.0",
@@ -13,7 +14,8 @@
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
-    "styled-components": "^4.4.1"
+    "styled-components": "^4.4.1",
+    "redux-devtools-extension": "^2.13.8"
   },
   "scripts": {
     "start": "react-scripts start",

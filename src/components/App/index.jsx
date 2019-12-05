@@ -9,7 +9,7 @@ export const App = props => {
   return (
       <Router>
         <Route path="/" exact component={MainRoute} />
-        <Route path="/results" exact render={() => isFavoritesRemaining ?
+        <Route path="/results" render={() => isFavoritesRemaining ?
             <Redirect to="/" /> : <WeirdnessScoreRoute />}
         />
       </Router>

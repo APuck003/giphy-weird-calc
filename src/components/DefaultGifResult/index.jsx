@@ -2,17 +2,6 @@ import React from 'react'
 import styled from "styled-components"
 
 const StyledGifSection = styled.div`
-  @keyframes loading {
-    0%,
-    100% {
-      font-size: 5rem;
-      transform-origin: center;
-    }
-    50% {
-      font-size: 8rem;
-      transform-origin: center;
-    }
-  }
 
   display: flex;
   flex-direction: column;
@@ -41,7 +30,7 @@ export const DefaultGifResult = props => {
         <h5>{handleLoading ? "Finding Gif" : "Enter Phrase to Search"}</h5>
         
         <StyledGifResult>
-          <StyledDefaultSpan role="img" aria-label="default-result">
+          <StyledDefaultSpan>
             Default Gif Result
           </StyledDefaultSpan>
         </StyledGifResult>
