@@ -1,19 +1,21 @@
 import React from "react";
 import {DefaultFavoriteGifs} from "../DefaultFavoriteGifs"
-import { FoundFavorite } from "../FoundFavorite";
+import { FoundFavorite } from "../FoundFavorite"
 
+// style={{ flexWrap: "wrap", justifyContent: "space-around", display: "flex", flexDirection: "row", width: "100%" }}
 
 export const FavoriteGifs = props => {
-  const { likedGifs } = props;
+  const {likedGifs} = props
+  
   return (
-    <div>
+    <>
       {likedGifs.map((gif, index) =>
         gif.url === null ? (
-          <DefaultFavoriteGifs />
+          <DefaultFavoriteGifs key={index}/>
         ) : (
           <FoundFavorite key={gif.phrase} gif={gif} />
         )
       )}
-    </div>
-  );
-};
+    </>
+  )
+}

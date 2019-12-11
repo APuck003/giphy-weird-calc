@@ -6,4 +6,4 @@ export const mapStateToProps = state => ({
   score: getWeirdScore(state)
 })
 
-export default connect(mapStateToProps(TotalWeirdnessScore))
+export default connect(mapStateToProps)(TotalWeirdnessScore)

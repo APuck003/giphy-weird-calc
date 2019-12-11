@@ -1,6 +1,5 @@
 import React from 'react'
-import {StyledSearch} from "../../styles"
-// import {Formik} from "formik"
+import {StyledSearch, StyledButton, StyledInput, StyledForm} from "../../styles"
 
 
 export const GifSearchInput = props => {
@@ -13,12 +12,17 @@ export const GifSearchInput = props => {
           Search Term
         </label>
         
-        <form onSubmit={e => {
+        <StyledForm onSubmit={e => {
           e.preventDefault();
           !handleEmptySearch && search();
         }}>
-          <input type="text" value={searchPhrase} onChange={handleChange} />
-        </form>
+          <StyledInput type="text" value={searchPhrase} onChange={handleChange} />
+          
+          <StyledButton type="submit" disabled={handleEmptySearch}>
+            SEARCH
+          </StyledButton>
+          
+        </StyledForm>
       </StyledSearch>
   )
 }

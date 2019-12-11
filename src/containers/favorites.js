@@ -6,4 +6,4 @@ export const mapStateToProps = state => ({
   likedGifs: getFavorites(state)
 })
 
-export default connect(mapStateToProps(FavoriteGifs))
+export default connect(mapStateToProps)(FavoriteGifs)

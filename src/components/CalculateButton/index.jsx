@@ -11,7 +11,7 @@ export const CalculateButton = props => {
           onClick={() => {
             props.history.push("/results");
           }}
-          disabled={!isFavoritesRemaining}
+          disabled={isFavoritesRemaining}
       >
       
         <span>CALCULATE MY WEIRDNESS SCORE</span>

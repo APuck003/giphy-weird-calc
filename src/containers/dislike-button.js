@@ -6,7 +6,4 @@ export const mapDispatchToProps = dispatch => ({
   dislike: phrase => dispatch(removeFavorite(phrase))
 });
 
-export default connect(
-    undefined,
-    mapDispatchToProps
-)(DislikeButton);
+export default connect(undefined, mapDispatchToProps)(DislikeButton);
